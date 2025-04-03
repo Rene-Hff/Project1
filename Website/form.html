@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Formular</title>
+</head>
+<header>
+    <nav class="navi">
+        <ul>
+            <li class="home"><a href="index.html">HOME</a></li>
+            <li class="form"><a href="form.html">Formular</a></li>
+            <li class=""><a href="geo.html">Geolocation</a></li>
+            <li class=""><a href="#">Link</a></li>
+        </ul>
+    </nav>
+
+                <label for="suche"></label>
+                <input type="search" id="suche" placeholder="Suche">
+</header>
+<body>
+<h1>Formularelemente</h1>
+
+<div class="formular_div">
+    <form action="">
+        <p>
+            <label for="nachname">Name</label>
+            <input type="text" name="nachname" id="nachname" placeholder="Nachname" requiered>
+        </p>
+    <hr>
+        <p>
+            <label for="alter">Alter</label>
+            <input type="number" min="0" max="120" step="1" name="alter" id="alter">
+        </p>
+        <p>
+            <label for="geburtsdatum">Geburtsdatum</label>
+            <input type="date" name="geburtsdatum" id="geburtsdatum">
+        </p>
+        <p>
+            <label for="farbe">Lieblingsfarbe</label>
+            <input type="color" name="farbe" id="farbe">
+        </p>
+        <p>
+            <label for="like">Like it</label>
+            <input type="range" name="like" id="like">
+        </p>
+    <hr>
+        <p>
+            <label for="weblink">Weblink</label>
+            <input type="url" name="weblink" id="weblink">
+        </p>
+        <p>
+            <label for="telefon">Telefon</label>
+            <input type="tel" name="telefon" id="telefon">
+        </p>
+    <hr>
+        <p>
+            <label for="kundennr">Kundennummer</label>
+            <input type="text" name="kundennr" id="kundennr" title="3 Buchstaben gefolgt von 4 Zahlen" pattern="^[A-Za-z] {3} [0-9] {4}" required>
+        </p>
+    <hr>
+        <p>
+            <label for="interessen">Interessen</label>
+             <input type="text" list="intliste" name="interessen" id="interessen">
+                <datalist id="intliste">
+                 <option value="HTML5">
+                  <option value="CSS3">
+                   <option value="JavaScript">
+                </datalist>
+        </p>
+    <hr>
+        <p>
+            <input type="submit" value="Senden" class="senden">
+        </p>
+    </form>
+</div>
+
+    
+
+
+
+
+
+
+
+<!--Footer beginnt-->
+
+<footer>
+ <div class="footer_div">
+    
+    <div class="link_box1">
+    <h3>Headline</h3>
+    <p><a href="#">Link</a></p>
+    <p><a href="#">Link</a></p>
+    <p><a href="#">Link</a></p>
+    
+ </div>
+    <div class="link_box2">
+    <h3>Headline</h3>
+    <p><a href="#">Link</a></p>
+    <p><a href="#">Link</a></p>
+    <p><a href="#">Link</a></p>
+ </div>
+ <div class="link_box3">
+    <h3>Headline</h3>
+    <p><a href="#">Link</a></p>
+    <p><a href="#">Link</a></p>
+    <p><a href="#">Link</a></p>
+ </div>
+
+ </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+*{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+accent-color: rgb(35, 93, 119);
+margin: 0;
+padding: 0;
+}
+html {
+height: 100%;
+}
+body {
+background-color:  rgb(35, 93, 119);
+}
+
+.navi ul {
+background-color: rgb(35, 93, 119);
+justify-content: center;
+text-align: center;
+list-style: none;
+gap: 2rem;
+padding: 1.5rem;
+}
+.navi li {
+padding: 1rem;
+font-size: 120%;
+}
+.navi li a {
+text-decoration: none;
+color:white;
+}
+.navi a:hover {
+color: white;
+border-bottom: 2px solid whitesmoke;
+transition: 125ms ease-out;
+}
+.home{
+margin-right: auto;
+}
+#suche {
+font-family: inherit;
+background-color:white;
+border-radius: 5px;
+border: none;
+padding:0.4rem;
+display: flex;
+width: 20rem;
+height: 2rem;
+margin: 1rem auto;
+}
+h1{
+text-align: center;
+color:white;
+}
+
+/*---- Beginn Formular ----*/
+
+
+.formular_div {
+background-color:rgb(174, 178, 179);
+margin: 2rem;
+border: 8px solid rgb(255, 255, 255);
+border-radius: 2px;
+color: rgb(35, 93, 119);
+}
+hr {
+color:whitesmoke;}
+p{
+margin:1rem;
+}
+label{
+padding-bottom:0.2rem;
+display: block;
+cursor: pointer;
+}
+input{
+padding: 0.3rem;
+font-family: inherit;
+border-radius: 5px ;
+border: none;
+background-color:whitesmoke;
+}
+.senden{
+display: inline-block;
+width: 7rem;
+margin-left: auto;
+background-color: rgb(143, 245, 248);
+font-size: 1rem;
+font-weight: 600;
+padding: 0.5rem;
+color: rgb(35, 93, 119);
+}
+.senden:hover{
+background-color:aqua;
+}
+.footer_div{
+height:300px;
+color: white;
+background-color: rgb(35, 93, 119);
+display:flex;
+justify-content:space-evenly;
+align-items: center;
+}
+.footer_div a{
+text-decoration: none;
+color:white;
+}
+.footer_div p{
+padding: 0.5rem;
+display: flex;
+justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 670px) {
+form p {
+    display: flex;
+    }
+label {
+    width: 12rem;
+    }
+.formular_div {
+    width: 40rem;
+    margin: 2rem auto;
+    }
+.navi ul {
+    display: flex;
+    }
+}

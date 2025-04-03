@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <ul>
+            <li>
+                <label for="hintergrund_farbe">Hintergrundfarbe</label>
+                <select name="hintergrund_farbe" id="hintergrund_farbe">
+                    <option value="darkolivegreen">Oliv</option>
+                    <option value="indigo">Indigo</option>
+                    <option value="darkred">Dunkelrot</option>
+                </select>
+            </li>
+            <li>
+                <label for="schrift_groesse">Schriftgröße</label>
+                <select name="schrift_groesse" id="schrift_groesse">
+                    <option value="small">klein</option>
+                    <option value="medium">mittel</option>
+                    <option value="large">groß</option>
+                    <option value="x-large">riesig</option>
+                </select>
+            </li>
+            <li>
+                <label for="text_farbe">Farbe</label>
+                <select name="text_farbe" id="text_farbe">
+                    <option value="pink">Pink</option>
+                    <option value="gold">Gold</option>
+                    <option value="silver">Silber</option>
+            </select>
+            </li>
+        </ul>
+    </fieldset>
+
+</form>
+    
+</body>
+
+<script>
+// HTML-Elemente auswählen
+const bodyElem = document.querySelector('body');
+const hintergrundFarbe = document.getElementById('hintergrund_farbe');
+const textFarbe = document.getElementById('text_farbe');
+const schriftGroesse = document.getElementById('schrift_groesse');
+
+if (!localStorage.getItem('storage_hintergrundFarbe')) {
+    befuelleStorage();
+} else {
+    setzeFormatierungen();
+}
+
+function befuelleStorage() {
+    localStorage.setItem('storage_hintergrundFarbe' , hintergrundFarbe.value);
+    localStorage.setItem('storage_schriftGroesse' , schriftGroesse.value);
+    localStorage.setItem('storage_textFarbe' , textFarbe.value);
+
+    setzeFormatierungen();
+}
+
+function setzeFormatierungen() {
+let aktHgFarbe = localStorage.getItem('storage_hintergrundFarbe');
+let aktSchriftgroesse = localStorage.getItem('storage_schriftGroesse');
+let aktTextFarbe = localStorage.getItem('storage_textFarbe');
+
+hintergrundFarbe.value = aktHgFarbe;
+schriftGroesse.value = aktSchriftgroesse;
+textFarbe.value = aktTextFarbe;
+
+bodyElem.style.backgroundColor = aktHgFarbe;
+bodyElem.style.fontSize = aktSchriftgroesse;
+bodyElem.style.color = aktTextFarbe;
+}
+
+hintergrund_farbe.onchange = befuelleStorage;
+text_farbe.onchange = befuelleStorage;
+schrift_groesse.onchange = befuelleStorage;
+
+
+</script>
+</html>
